@@ -66,9 +66,9 @@ export class Game extends Scene {
     startBall() {
         // if (not ball in motion), if the ball is not moving.
         // when the game starts, if (not FALSE) = if (TRUE)
-        if (this.ballInMotion) { //check if the ball is not in motion
-            this.ballInMotion = true;
+        if (!this.ballInMotion) { //check if the ball is not in motion
             this.ball.setVelocity(200, 200);
+            this.ballInMotion = true;
         }
     }
 }
